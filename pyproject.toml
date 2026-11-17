@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "group7-grounded-qa"
+version = "0.1.0"
+description = "Group 7 grounding guardrail for the Mellea Grounded Q&A Assistant"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "mellea==0.9.0",
+    "pydantic>=2,<3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
